@@ -1,0 +1,58 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+ul, ol {
+    margin:0;
+    padding:0;
+    display:block;
+    list-style: none;
+}
+a, span, strong, li, input, label, legend {
+    font-family: 'arial';
+    font-size: 13px;
+}
+a {
+    cursor: pointer;
+   color:#133275;
+   text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.header {
+}
+.logopanel {
+    background:#4166B0;
+    padding:15px 30px;
+}
+.logopanel img {
+    margin-right:15px;
+}
+.clearfix::after {
+    display:block;
+    content:".";
+    height:0;
+    font-size: 0;
+    line-height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.content {
+    min-height: 500px;
+}
+.footer {
+    height:40px;
+    background:#4466B0;
+    text-align: center;
+}
+.footer span {
+    font-size:14px;
+    color:#fff;
+}
+.footer small, .footer a {
+    font-size: 10px;
+}
+.right-content {
+    margin-left: 250px;
+}

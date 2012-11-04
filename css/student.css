@@ -1,0 +1,168 @@
+.navbar {
+    margin:2px 35px;
+}
+.navbar span {
+    font-weight: bold;
+}
+.navbar a {
+    font-weight: bold;
+    padding:0 15px;
+}
+.navbar .left {
+    float:left;
+}
+.navbar .right {
+    float:right;
+}
+.content-wrapper {
+    margin-top:25px;
+}
+.left-content {
+    float:left;
+}
+.left-content ul:last-child.section li:last-child a {
+    border-bottom: 2px solid #909090;
+}
+.section {
+}
+.section .title {
+    height:35px;
+}
+.section .title > * {
+    float:left;
+}
+.section .title .title-data {
+    background: #4466B0;
+    line-height: 35px;
+    width:200px;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+}
+.section .title .title-roof {
+    height:35px;
+    width:37px;
+    background:url('../img/roof.png');
+}
+.section .sub-menu-1 {
+    font-weight: bold;
+}
+.section .open {
+    position:relative;
+}
+.section .open .bubble-wrapper {
+    display: block;
+}
+.section .bubble-wrapper {
+    display: none;
+    position:absolute;
+    left:240px;
+    top:0;
+    width:300px;
+    height:150px;
+    border:1px solid rgba(0,0,0,.2);
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.bubble-wrapper .bubble {
+    position:relative;
+}
+.bubble-wrapper .bubble-tail {
+    position:absolute;
+    background:url('../img/bubble-tail.png');
+    left:-50px;
+    top:4px;
+    width:50px;
+    height:32px;
+}
+.bubble-wrapper .caret-outer {
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right: 14px solid rgba(0,0,0,.2); 
+    width: 0;
+    height:0;
+    margin-left: -14px;
+    margin-top: 2px;
+    float:left;
+
+}
+.bubble-wrapper .caret-inner {
+    float:left;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid white; 
+    width: 0;
+    height:0;
+    margin-left: -12px;
+    margin-top: 4px;
+    z-index: 90;
+}
+.section .sub-menu-1 a {
+    display:block;
+    cursor: pointer;
+    line-height: 35px;
+    padding-left: 35px;
+    margin-right: 37px;
+    border-right:2px solid #909090;
+}
+.jewel-notify {
+    text-align: center;
+    width: 25px;
+    line-height: 22px;
+    background:#D0D0D0;
+    float:right;
+    margin:5px 0;
+    margin-right: 45px;
+}
+.lecturer-announcement, .student-update {
+    width:800px;
+    margin-bottom: 30px;
+}
+.lecturer-announcement .header, .student-update .header {
+    font-weight: bold;
+    line-height: 30px;
+    color:#fff;
+    background:#4466B0;
+    padding:0 15px;
+}
+
+.lecturer-announcement .body, .student-update .body {
+    border:1px solid #909090;
+    height:240px;
+    border-top:none;
+    overflow: auto;
+}
+.announcement-item {
+}
+.announcement-item .item-1 {
+    font-weight: bold;
+    background:#ccccff;
+    line-height: 23px;
+}
+.announcement-item .item-1 .cls {
+    float:left;
+    padding:0 1.2em;
+}
+.announcement-item .item-1 .poster {
+    display:block;
+    padding:0 1.2em;
+    text-align: center;
+}
+.announcement-item .item-1 .time {
+    float:right;
+    padding: 0 1.2em;
+}
+.announcement-item .item-2 {
+    padding:5px 1.2em;
+    height: 47px;
+}
+.pop-container {
+    background:#000;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
