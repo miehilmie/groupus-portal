@@ -8,11 +8,7 @@
         <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
         <script src="<?php echo base_url(); ?>js/student.js"></script>
         <script>
-            (function() {
-                $('.bubble-toggle').live('click',function(){
-                    $(this).next().toggle();
-                });
-            })();
+
         </script>
     </head>
     <body>
@@ -31,21 +27,52 @@
                     <ul class="section">
                         <li class="title clearfix"><div class="title-data">My Menu!</div><div class="title-roof"></div></li>
                         <li id="subject" class="sub-menu-1">
-                            <div class="jewel-notify">1</div>
-                            <div class="bubble-toggle toggler" data-href="/student/subject/">
-                                <a>Subjects</a>
-                            </div>
-                            <li class="bubble-wrapper">
-                                <ul class="bubble">                    
-                                    <div style="width:12px; height: 25px;">
-                                        <div class="caret-outer" ></div>
-                                        <div class="caret-inner" ></div>
-                                    </div>
-                                    <li></li>
-                                </ul>
-                            </li>
-                            </li>
-                        <li id="message" class="sub-menu-1"><div class="jewel-notify"></div><a>Messages</a></li>
+                            <ul>
+                                <li class="jewel-notify">1</li>
+                                <li class="bubble-toggle toggler" data-href="/student/subject/" data-target="subjectFlyout">
+                                    <a>Subjects</a>
+                                </li>
+                                <li class="bubble-wrapper" id="subjectFlyout">
+                                    <ul class="bubble">                    
+                                        <div style="width:12px; height: 25px;">
+                                            <div class="caret-outer" ></div>
+                                            <div class="caret-inner" ></div>
+                                        </div>
+                                        <li>
+                                            <a href="/student/subject/1">
+                                                TCP1231
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="subject" class="sub-menu-1">
+                            <ul>
+                                <li class="jewel-notify">1</li>
+                                <li class="bubble-toggle toggler" data-href="/student/subject/" data-target="messageFlyout">
+                                    <a>Message</a>
+                                </li>
+                                <li class="bubble-wrapper" id="messageFlyout">
+                                    <ul class="bubble">                    
+                                        <div style="width:12px; height: 25px;">
+                                            <div class="caret-outer" ></div>
+                                            <div class="caret-inner" ></div>
+                                        </div>
+                                        <li>
+                                            <a href="/student/subject/1">
+                                                TCP1231
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/student/subject/1">
+                                                TCP1231
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="section">
                         <li class="title clearfix"><div class="title-data">My Group!</div><div class="title-roof"></div></li>
