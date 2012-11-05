@@ -11,7 +11,7 @@
             </div>
             <div class="navbar clearfix">
                 <div class="left"><span>Welcome, <?php echo $name; ?>!</span></div>
-                <div class="right"><a>Account Setting</a><a href="<?php echo site_url('logout'); ?>">Logout</a></div>
+                <div class="right"><a href="<?php echo site_url('setting') ?>">Account Setting</a><a href="<?php echo site_url('logout'); ?>">Logout</a></div>
             </div>
         </div>
         <div class="content">

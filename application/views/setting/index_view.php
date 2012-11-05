@@ -17,8 +17,8 @@
                 <img src="<?php echo base_url(); ?>/img/logo.png" /><img src="<?php echo base_url(); ?>/img/title-logo.png" />
             </div>
             <div class="navbar clearfix">
-                <div class="left"><span>Welcome, <?php echo $name; ?>!</span></div>
-                <div class="right"><a href="<?php echo site_url('setting') ?>">Account Setting</a><a href="<?php echo site_url('logout'); ?>">Logout</a></div>
+                <div class="left"><a href="/"><img style="margin-top:4px; margin-right:10px" src="<?php echo base_url(); ?>/img/home.png" /></a><span>Welcome, <?php echo $name; ?>!</span></div>
+                <div class="right"><a>Account Setting</a><a href="<?php echo site_url('logout'); ?>">Logout</a></div>
             </div>
         </div>
         <div class="content">
@@ -82,32 +82,21 @@
                     </ul>
                 </div>
                 <div class="right-content">
-                    <ul class="lecturer-announcement">
-                        <li class="header">Lecturer's Announcements</li>
-                        <li class="body">
-                            <ul class="announcement-item">
-                                <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-                                <li class="item-2">This is a test announcement for lecturer column</li>
-                            </ul>
-                            <ul class="announcement-item">
-                                <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-                                <li class="item-2">This is a test announcement for lecturer column</li>
-                            </ul>
-                            <ul class="announcement-item">
-                                <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-                                <li class="item-2">This is a test announcement for lecturer column</li>
-                            </ul>
-                            <ul class="announcement-item">
-                                <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-                                <li class="item-2">This is a test announcement for lecturer column</li>
-                            </ul>
-                        </li>
-                    </ul>
                     <ul class="student-update">
-                        <li class="header">My Updates</li>
+                        <li class="header">Account Settings</li>
                         <li class="body">
                             <ul class="update-item">
-                                <li class="item-1">This is a test announcement for lecturer column</li>
+                                <li class="item-1">
+                                    <fieldset>
+                                        <legend>Edit your account settings</legend>
+                                        <table>
+                                            <tr><td>Name: </td><td><input type="text" name="name" value="<?php echo $name ?>"</td></tr>
+                                            <tr><td>Gender: </td><td><input type="radio" name="gender" value="1" <?php echo ($gender == 1) ? 'checked' : '' ?> /><span>Male: </span><input type="radio" name="gender" value="2" <?php echo ($gender == 2) ? 'checked' : '' ?> /><span>Female: </span></td></tr>
+                                        </table>
+                                    </fieldset>
+
+                                    
+                                </li>
                             </ul>
                         </li>
                     </ul>

@@ -12,7 +12,7 @@ class Lecturer extends CI_Controller {
         if($user && ($this->session->userdata('type') == 2)) { // student type
             
             $data = array(
-                'name' => $user->name
+                'name' => $user['name']
             );
             
             $this->load->view('lecturer/index_view', $data);
