@@ -12,20 +12,35 @@
 class setting extends CI_Controller {
 
     function index() {
-        if($this->session->userdata('type') == 1) {
-            // student
-        }
-        else if($this->session->userdata('type') == 2) {
-            // lecturer
-        }
         $user = unserialize($this->session->userdata('user'));
         $type = $this->session->userdata('type');
+        
+        if($type == 1) {
+            // load related model
+            $this->load->model('announcement_model');
+            $this->load->model('subject_model');
+            
+            $announcements = $this->announcement_model->get_announcements($user['student_id']);
+            $subjects = $this->subject_model->get_student_subject($user['student_id']);
+
+            $data_extra = array(
+                'announcements' => $announcements,
+                'subjects' => $subjects
+            );
+            
+        }
+        else if($type == 2) {
+            $data_extra = array();
+            // lecturer
+        }
+
         $data = array(
             'name' => $user['name'],
             'username' => $user['username'],
             'password' => $user['password'],
             'gender' => $user['gender']
         );
+        $data = array_merge($data, $data_extra);
         $this->render(
                 array(
                     'master_page' => 'tmpl/tmpl_loggedin_master',

@@ -1,7 +1,7 @@
 <ul class="lecturer-announcement">
      <li class="header">Lecturer's Announcements</li>
      <li class="body">
-         <?php if(isset($announce_item) && !empty($announce_item)): ?>
+         <?php if(isset($announcements) && !empty($announcements)): ?>
          <?php
          /**
           * $a as announcement item
@@ -11,7 +11,7 @@
           * poster - poster
           * body - announcement conent
           **/
-         foreach($announce_item as $a): ?>
+         foreach($announcements as $a): ?>
          <ul class="announcement-item">
              <li class="item-1"><span class="cls"><?php echo $a->code ?></span><span class="time"><?php echo $a->time; ?></span><span class="poster"><?php echo $a->poster; ?></span></li>
              <li class="item-2"><?php echo $a->body; ?></li>

@@ -10,14 +10,20 @@ class Student extends CI_Controller {
         $info = unserialize($this->session->userdata('info'));
         
         if($user && ($this->session->userdata('type') == 1)) { // student type
-            // get announcement from db
+        
+            // load all related models
             $this->load->model('announcement_model');
+            $this->load->model('subject_model');
+            
             $announcements = $this->announcement_model->get_announcements($user['student_id']);
+            $subjects = $this->subject_model->get_student_subject($user['student_id']);
+            
             // @todo implement subject_model
             // $subjects = $this->subject_model->st_get_subjects($user['student_id']);
             $data = array(
                 'name' => $user['name'],
-                'announce_item' => $announcements
+                'announcements' => $announcements,
+                'subjects' => $subjects
             );
             $this->render(
                     array(
