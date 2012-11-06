@@ -15,8 +15,8 @@
                 <img src="<?php echo base_url(); ?>/img/logo.png" /><img src="<?php echo base_url(); ?>/img/title-logo.png" />
             </div>
             <div class="navbar clearfix">
-                <div class="left"><a href="/"><img style="margin-top:4px; margin-right:10px" src="<?php echo base_url(); ?>/img/home.png" /></a><span>Welcome, <?php echo $name; ?>!</span></div>
-                <div class="right"><a href="<?php echo site_url('setting'); ?>">Account Setting</a><a href="<?php echo site_url('logout'); ?>">Logout</a></div>
+                <ul class="left clearfix"><li><a href="/"><img src="<?php echo base_url(); ?>/img/home.png" /></a></li><li><span>Welcome, <?php echo $name; ?>!</span></li></ul>
+                <ul class="right"><li><a href="<?php echo site_url('setting'); ?>">Account Setting</a></li><li><a href="<?php echo site_url('logout'); ?>">Logout</a></li></ul>
             </div>
         </div>
         <div class="content">

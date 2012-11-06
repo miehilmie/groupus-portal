@@ -1,5 +1,5 @@
 .navbar {
-    margin:2px 35px;
+    margin:12px 15px 2px;
 }
 .navbar span {
     font-weight: bold;
@@ -13,6 +13,10 @@
 }
 .navbar .right {
     float:right;
+}
+.navbar .right li, .navbar .left li {
+    display: inline-block;
+    vertical-align: bottom;
 }
 .content-wrapper {
     margin-top:25px;
