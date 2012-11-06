@@ -11,7 +11,7 @@ class Home extends CI_Controller {
     function index() {
         if((($u = $this->input->cookie('u',true)) && ($p = $this->input->cookie('p',true))) || 
            (($u = $this->session->userdata('u')) && ($p = $this->session->userdata('p')))) {
-            $query = $this->db->query('SELECT `username`,`password`,`name`,`student_id`,`lecturer_id`,`gender` FROM `user` WHERE `username`=? AND `password`=?', array($u, $p));
+            $query = $this->db->query('SELECT * FROM `user` WHERE `username`=? AND `password`=?', array($u, $p));
             if($query->num_rows() == 1) {
                 $user = $query->row_array();
                 if($user['student_id']) {

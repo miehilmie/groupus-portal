@@ -1,22 +1,25 @@
 <ul class="lecturer-announcement">
      <li class="header">Lecturer's Announcements</li>
      <li class="body">
+         <?php if(isset($announce_item) && !empty($announce_item)): ?>
+         <?php
+         /**
+          * $a as announcement item
+          * attributes:
+          * code - subject code
+          * time - announcement time
+          * poster - poster
+          * body - announcement conent
+          **/
+         foreach($announce_item as $a): ?>
          <ul class="announcement-item">
-             <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-             <li class="item-2">This is a test announcement for lecturer column</li>
+             <li class="item-1"><span class="cls"><?php echo $a->code ?></span><span class="time"><?php echo $a->time; ?></span><span class="poster"><?php echo $a->poster; ?></span></li>
+             <li class="item-2"><?php echo $a->body; ?></li>
          </ul>
-         <ul class="announcement-item">
-             <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-             <li class="item-2">This is a test announcement for lecturer column</li>
-         </ul>
-         <ul class="announcement-item">
-             <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-             <li class="item-2">This is a test announcement for lecturer column</li>
-         </ul>
-         <ul class="announcement-item">
-             <li class="item-1"><span class="cls">TCP1011</span><span class="time">8-Sept-2012 11:00</span><span class="poster">Dr Ramakrishnan Kannan</span></li>
-             <li class="item-2">This is a test announcement for lecturer column</li>
-         </ul>
+         <?php endforeach; ?>
+         <?php else: ?>
+         <div><span>You have no announcement yet</span></div>
+         <?php endif; ?>
      </li>
  </ul>
  <ul class="student-update">

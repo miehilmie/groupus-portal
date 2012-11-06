@@ -6,25 +6,8 @@
         <link href="<?php echo base_url(); ?>/css/signup.css" rel="stylesheet" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
-        <script>
-            (function() {
-                $('input[name=usertype]').live('click',function() {
-                    var t = $(this);
-                    $('.info-wrapper').each(function(i,v) {
-                        var x = $(v);
-                        x.hide();
-                        if(x.attr('data') == t.val()) {
-                           x.show();
-                        }
-                    });
-                });
-                $('#register-form').live('submit',function() {
-                    alert($(this).serialize());
-                    return false;
-                });
-            })();
-
-        </script>
+        <script src="<?php echo base_url() ?>js/common.js" type="text/javascript"></script>
+        <script src="<?php echo base_url() ?>js/signup.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="header">
@@ -41,7 +24,7 @@
             <?php endif;?>
                 <div id="register-info">
                     <h1>Registration</h1>
-                    <?php echo form_open('signup'); ?>
+                    <?php echo form_open('signup', 'id="register-form"'); ?>
                     <fieldset>
                         <legend style="color:#6D6B79;font-weight:bold; font-size: 16px;">Information details:</legend>
                         <fieldset>
