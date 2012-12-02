@@ -1,5 +1,6 @@
 <ul class="section">
 <li class="title clearfix"><div class="title-data">My Menu!</div><div class="title-roof"></div></li>
+<?php if($subjects): ?>
 <li id="subject" class="sub-menu">
     <ul>
         <li class="jewel-notify">1</li>
@@ -24,6 +25,7 @@
         </li>
     </ul>
 </li>
+<?php endif; ?>
 <li id="subject" class="sub-menu">
     <ul>
         <li class="jewel-notify">1</li>
@@ -50,8 +52,11 @@
 </li>
 </ul>
 <ul class="section">
-<li class="title clearfix"><div class="title-data">My Group!</div><div class="title-roof"></div></li>
-<li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
-<li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
-<li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
+    <li class="title clearfix"><div class="title-data">My Group!</div><div class="title-roof"></div></li>
+    <li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
+    <li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
+    <li class="sub-menu"><ul><li class="item-1"><a>Group 1</a></li></ul></li>
+</ul>
+<ul class="searches">
+    <li></li>
 </ul>

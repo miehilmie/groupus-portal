@@ -1,3 +1,4 @@
+/* top section */
 .navbar {
     margin:12px 15px 2px;
 }
@@ -18,15 +19,20 @@
     display: inline-block;
     vertical-align: bottom;
 }
+
+/* mid section */
 .content-wrapper {
     margin-top:25px;
 }
+
+/* left section */
 .left-content {
     float:left;
 }
-.left-content ul:last-child.section li:last-child a {
+.left-content ul:last-child .sub-menu:last-child a {
     border-bottom: 2px solid #909090;
 }
+
 .section {
 }
 .section .title {
@@ -48,16 +54,26 @@
     width:37px;
     background:url('../img/roof.png');
 }
-.section .sub-menu-1 {
+
+.sub-menu {
     font-weight: bold;
 }
-.section .open {
+.sub-menu .item-1 a {
+    display:block;
+    cursor: pointer;
+    line-height: 35px;
+    padding-left: 35px;
+    margin-right: 37px;
+    border-right:2px solid #909090;
+}
+.sub-menu .open {
     position:relative;
 }
-.section .open .bubble-wrapper {
+.sub-menu .open .bubble-wrapper {
     display: block;
 }
-.section .bubble-wrapper {
+
+.bubble-wrapper {
     display: none;
     position:absolute;
     left:240px;
@@ -68,17 +84,13 @@
     -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
-.bubble-wrapper .bubble {
+.bubble-wrapper .bubble  {
     position:relative;
-    width:300px;
 }
-.bubble-wrapper .bubble-tail {
-    position:absolute;
-    background:url('../img/bubble-tail.png');
-    left:-50px;
-    top:4px;
-    width:50px;
-    height:32px;
+.bubble-wrapper .bubble-caret {
+    width:12px;
+    height: 25px;
+    position: absolute;
 }
 .bubble-wrapper .caret-outer {
     border-top: 14px solid transparent;
@@ -102,14 +114,20 @@
     margin-top: 4px;
     z-index: 90;
 }
-.section .sub-menu-1 a {
-    display:block;
-    cursor: pointer;
-    line-height: 35px;
-    padding-left: 35px;
-    margin-right: 37px;
-    border-right:2px solid #909090;
+.bubble-wrapper .bubble .bubble-item {
+    padding:5px;
 }
+.bubble-wrapper .bubble .bubble-item a {
+    display: block;
+    padding:2px 25px;
+    font-size:11px;
+    border-right: 1px solid #D0D0D0;
+}
+.bubble-wrapper .bubble .bubble-item a:hover {
+    background:#4466B0;
+    color:#fff;
+}
+
 .jewel-notify {
     text-align: center;
     width: 25px;

@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>GroupUs | Optimized Academic Grouping System - Registration</title>
+        <link rel="icon" type="image/ico" href="<?php echo base_url(); ?>favicon.ico"/>
         <link href="<?php echo base_url(); ?>/css/common.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>/css/signup.css" rel="stylesheet" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <title>GroupUs! | Optimized Academic Grouping System</title>
+        <link rel="icon" type="image/ico" href="<?php echo base_url(); ?>favicon.ico"/>
         <link href="<?php echo base_url(); ?>/css/common.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>/css/login.css" rel="stylesheet" />
     </head>
